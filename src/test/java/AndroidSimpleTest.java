@@ -1,4 +1,8 @@
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,10 +21,12 @@ public class AndroidSimpleTest {
         }
     }
 
-    //Test that currency exchanger application is started with 0 amount entered
+    //Test that GMB application is started with 0 amount entered
     @Test
     public void test() {
         System.out.println("It's working, can't be true!");
-        //real test goes here
+
+        WebElement e = driver.findElement(By.className("android.widget.Button"));
+        Assert.assertEquals(e.getText(), "Get started");
     }
 }

@@ -17,14 +17,14 @@ public class GetAndroidDriver {
     @BeforeTest
     public AppiumDriver getAndroidDriver() throws MalformedURLException {
 
-        File classpathRoot = new File("/Users/marina/Downloads");
+        File classpathRoot = new File("D:\\Downloads");
         File app = new File(classpathRoot, "vega-dogfood_20150928.01_RC10.apk");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.0.1");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AVD_for_Nexus_One");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "015d21d9380ff80a");
         capabilities.setCapability("appPackage", "com.google.android.apps.vega");
         capabilities.setCapability("appActivity", "com.google.android.apps.vega.VegaMainActivity");
         capabilities.setCapability("app", app.getAbsolutePath());
